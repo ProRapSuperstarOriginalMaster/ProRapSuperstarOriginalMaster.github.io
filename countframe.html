@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #counter {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(0, 106, 179);
+            color: white;
+            font-size: 100px;
+            font-weight: bold;
+        }
+        #texter {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="counter">5000000000</div>
+<div id="texter">Järfällas kommunskuld</div>
+<script>
+    let count = 5000000000 + 34.8 * (Date.now()/1000 - 1712159102); 
+    const rate = 1; // Increment rate
+    const counterElement = document.getElementById("counter");
+
+    function updateCounter() {
+        count += rate;
+        counterElement.innerText = count.toFixed(0) + " kr";
+    }
+
+    setInterval(updateCounter, 1000/34.8);
+</script>
+
+</body>
+</html>
